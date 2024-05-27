@@ -1,0 +1,185 @@
+{
+    "tables": {
+        "user":{
+            "columns": {
+                "u_id": "INT AUTO_INCREMENT PRIMARY KEY",
+                "r_id": "INT",
+                "t_id": "INT",
+                "F_name":"VARCHAR(100)",
+                "L_name":"VARCHAR(100)",
+                "password":"VARCHAR(100)",
+                "email":"VARCHAR(100)",
+                "gender":"VARCHAR(100)",
+                "age": "INT",
+                "created_at":"DATE",
+                "updated_at":"DATE",
+                "is_deleted":"BIT"
+                
+            }
+        },
+        "role":{
+            "columns": {
+                "r_id":"INT AUTO_INCREMENT PRIMARY KEY",
+                "name":"VARCHAR(100)",
+                "created_at":"DATE",
+                "updated_at":"DATE"
+            }
+        },
+        
+        "comment":{
+            "columns": {
+                "c_id":"INT AUTO_INCREMENT PRIMARY KEY",
+                "m_id": "INT",
+                "u_id": "INT",
+                "comment":"VARCHAR(100)",
+                "created_at":"DATE",
+                "updated_at":"DATE"
+            }
+        },
+        "rating":{
+            "columns": {
+                "ra_id":"INT AUTO_INCREMENT PRIMARY KEY",
+                "u_id": "INT",
+                "rate_value":"INT",
+                "created_at":"DATE",
+                "updated_at":"DATE"
+            }
+        },
+        "voting":{
+            "columns": {
+                "v_id":"INT AUTO_INCREMENT PRIMARY KEY",
+                "u_id": "INT",
+                "p_id": "INT",
+                "vote_value":"INT",
+                "created_at":"DATE",
+                "updated_at":"DATE"
+            }
+        },
+        "e_wallet":{
+            "columns": {
+                "ew_id":"INT AUTO_INCREMENT PRIMARY KEY",
+                "u_id": "INT",
+                "amount": "INT",
+                "address":"VARCHAR(100)",
+                "pin": "INT",
+                "created_at":"DATE",
+                "updated_at":"DATE"
+            }
+        },
+
+        "ticket":{
+            "columns": {
+                "t_id":"INT AUTO_INCREMENT PRIMARY KEY",
+                "u_id": "INT",
+                "m_id": "INT",
+                "seat_number":"VARCHAR(100)",
+                "created_at":"DATE",
+                "is_deleted":"BIT"
+            }
+        },
+
+        "teams":{
+            "columns": {
+                "te_id":"INT AUTO_INCREMENT PRIMARY KEY",
+                "name":"VARCHAR(100)",
+                "photo_path":"VARCHAR(100)",
+                "created_at":"DATE",
+                "updated_at":"DATE"
+            }
+
+
+        },
+        "players":{
+            "columns": {
+                "p_id":"INT AUTO_INCREMENT PRIMARY KEY",
+                "tl_id": "INT",
+                "name":"VARCHAR(100)",
+                "position":"VARCHAR(100)",
+                "number": "INT",
+                "created_at":"DATE",
+                "updated_at":"DATE"
+
+            }
+        },
+        "match_details":{
+            "columns": {
+                "m_id":"INT AUTO_INCREMENT PRIMARY KEY",
+                "l_id": "INT",
+                "time": "INT",
+                "team1": "INT",
+                "team2": "INT",
+                "team1_score": "INT",
+                "team2_score":"INT",
+                "date": "DATE",
+                "link":"VARCHAR(100)",
+                "result": "INT",
+                "created_at":"DATE",
+                "updated_at":"DATE"
+
+            }
+        },
+        "match_location":{
+            "columns": {
+                "l_id":"INT AUTO_INCREMENT PRIMARY KEY",
+                "city_id": "INT",
+                "name":"VARCHAR(100)",
+                "created_at":"DATE",
+                "updated_at":"DATE"
+
+            }
+        },
+
+        "leagues":{
+            "columns":{
+                "le_id":"INT AUTO_INCREMENT PRIMARY KEY",
+                "name":"VARCHAR(100)",
+                "created_at":"DATE",
+                "updated_at":"DATE"
+            }
+        },
+        "teams_leagues":{
+            "columns":{
+                "tl_id":"INT AUTO_INCREMENT PRIMARY KEY",
+                "te_id": "INT",
+                "le_id": "INT",
+                "rank": "INT",
+                "created_at":"DATE",
+                "updated_at":"DATE"
+            }
+        },
+        "city":{
+            "columns":{
+                "city_id":"INT AUTO_INCREMENT PRIMARY KEY",  
+                "name":"VARCHAR(100)",  
+                "created_at":"DATE",
+                "updated_at":"DATE"
+            }
+        },
+        "player_statistics":{
+            "columns":{
+                "ps_id":"INT AUTO_INCREMENT PRIMARY KEY", 
+                "m_id": "INT",
+                "p_id": "INT",
+                "st_id": "INT",
+                "value": "INT",
+                "created_at":"DATE",
+                "updated_at":"DATE"
+            }
+        },
+        "statistics_type":{
+            "columns":{
+                "st_id":"INT AUTO_INCREMENT PRIMARY KEY", 
+                "st_name": "VARCHAR(100)" ,
+                "created_at":"DATE",
+                "updated_at":"DATE"
+            }
+        }
+
+       
+        
+
+
+
+        
+  }
+}
